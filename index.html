@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pejy Fandraisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fanamboarana ny body */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Animation ho an'ny login-container */
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(30px);
+            animation-fill-mode: forwards;
+        }
+
+        /* Fanamboarana ny lohateny */
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Fanamboarana ny input */
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        /* Effet raha asiana focus ilay input */
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #0072ff;
+            box-shadow: 0 0 5px rgba(0, 114, 255, 0.5);
+            outline: none;
+        }
+
+        /* Fanamboarana ny bokotra */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0072ff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Effet raha atao hover ilay bokotra */
+        button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+
+        /* Keyframes animation (Fade-in + Miakatra moramora) */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header {
+            background-color: #0072ff; /* Manampy loko ho an'ny background */
+            padding: 40px 20px; /* Padding ho an'ny fitombenana tsara */
+            color: white; /* Loko fotsy ho an'ny lahatsoratra */
+            text-align: center; /* Afaka manampy alignment tsara amin'ny lahatsoratra */
+            border-radius: 10px; /* Radius kely ho an'ny zoro */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow manampy endrika */
+            margin: 0 0 20px 0; /* Margin ambany hanasaraka ny header sy ny content */
+            transition: transform 0.3s ease; /* Effect animation rehefa mivezivezy */
+        }
+
+        /* Fampanofana ny h1 */
+        header h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px; /* Mametraka spacing eo amin'ny litera */
+        }
+
+        /* Fampanofana ny h4 */
+        header h4 {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+            color: #f0f0f0; /* Mampiasa loko hafa ho an'ny h4 */
+        }
+
+        /* Hover animation ho an'ny header */
+        header:hover {
+            transform: scale(1.02); /* Manampy zoom effect */
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    
+    
+    
+    
+    
+    <div class="login-container">
+        <header>
+        <h1>BIENVENUE SUR LA PAGE DE CONNECTION</h1>
+        <h4>Connectez-vous maintenant</h4>
+    </header><br ><br > 
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="number">Entrer votre numéro de téléphone :</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Enter votre mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Hiditra</button>
+            <div>
+                Pas de compte ? <a href="https://site-web-asa-en-ligne-m-da-6fzi.vercel.app/">Inscrivez-vous </a>
+            </div>
+        </form>
+    </div>
+</body>
+
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pejy Fandraisana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0072ff;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* Style for message icon (chat bubble) */
+        .message-bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            font-size: 30px;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        .message-bubble:hover {
+            background-color: #218838;
+        }
+
+        .message-form {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .message-form input,
+        .message-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .message-form button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .message-form button:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <!-- Message Icon (chat bubble) -->
+    <div class="message-bubble" id="messageBubble">
+        📩
+    </div>
+
+    <!-- Message Form (hidden by default) -->
+    <div class="message-form" id="messageForm">
+        <h3>Envoyez un message</h3>
+        <form action="https://formspree.io/f/mpwwoqpk" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <textarea name="message" rows="4" placeholder="Votre message..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the form
+        document.getElementById("messageBubble").addEventListener("click", function() {
+            var form = document.getElementById("messageForm");
+            // Toggle visibility of the form when the bubble is clicked
+            form.style.display = form.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
+
+</html>
